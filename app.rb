@@ -1,10 +1,14 @@
+module Application
 require 'sinatra'
 require 'coffee-script'
+class App < Sinatra::Base
 
-get '/' do
+ get '/' do
   erb :index
-end
+ end
 
-get '/application.js' do
+ get '/application.js' do
   coffee :application
+ end
+end
 end
